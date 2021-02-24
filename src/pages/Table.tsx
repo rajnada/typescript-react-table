@@ -58,8 +58,7 @@ const Table = () => {
       <DialogLoader loading={isLoading} />
       <TableRecords
         records={filteredValue.length > 0 ? filteredValue : currentData}
-      />
-
+      /> 
       <PaginationComponent
         postsPerPage={postsPerPage}
         totalPosts={data.length}

@@ -6,7 +6,6 @@ import "../css/pagination.scss";
 export interface Props {
   postsPerPage: number;
   totalPosts: number;
-
   handlePagination: (postsPerPage: number) => void;
 }
 export const PaginationComponent: React.FC<Props> = ({
@@ -20,21 +19,23 @@ export const PaginationComponent: React.FC<Props> = ({
     pageNumber.push(i);
   }
   return (
-    <nav aria-label="Page navigation example">
-      <ul className="pagination">
-        {pageNumber.map((num) => (
-          <li key={num} className="page-item">
-            <a
-              onClick={() => handlePagination(num)}
-              href="!#"
-              className="page-link"
-            >
-              {num}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <div className="pagination-wrapper">
+      <nav aria-label="Page navigation example">
+        <ul className="pagination">
+          {pageNumber.map((num) => (
+            <li key={num} className="page-item">
+              <a
+                onClick={() => handlePagination(num)}
+                href="!#"
+                className="page-link"
+              >
+                {num}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
   );
 };
 
