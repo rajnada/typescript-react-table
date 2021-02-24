@@ -6,6 +6,7 @@ import Album from "./pages/Album";
 import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
 
 import Table from "./pages/Table";
+import VideoGallary from "./pages/VideoGallary";
 // import Sidebar from "./Component/layout/Sidebar";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
               <div className="main-section">
                 <Route exact path="/" component={Table} />
                 <Route exact path="/album" component={Album} />
+                <Route exact path="/videos" component={VideoGallary} />
               </div>
             </Col>
           </Row>

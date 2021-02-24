@@ -19,7 +19,10 @@ const Sidebar = (props: Props) => {
           <Nav.Link href="/">Employ Record</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="/album">Gallary</Nav.Link>
+          <Nav.Link href="/album">Image Gallary</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link href="/videos">Video Gallary</Nav.Link>
         </Nav.Item>
       </Nav>
     </>

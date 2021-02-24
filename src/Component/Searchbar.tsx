@@ -11,7 +11,7 @@ const Searchbar: React.FC<Props> = ({
 }) => {
   const BarStyling = {
     display: "flex",
-    margin: "35px auto",
+    // margin: "35px auto",
     width: "31rem",
     height: "3rem",
     background: "rgb(242, 241, 249)",
@@ -21,7 +21,8 @@ const Searchbar: React.FC<Props> = ({
   };
 
   return (
-    <div>
+    <div className="d-block justify-content-center p-5 h-100">
+      <label className="mr-2 my-auto h5">SearchBar</label>
       <input
         style={BarStyling}
         key="random1"
