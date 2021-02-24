@@ -9,16 +9,21 @@
     "@types/jest": "^26.0.20",
     "@types/node": "^14.14.22",
     "@types/react": "^17.0.0",
+    "@types/react-bootstrap": "^0.32.25",
     "@types/react-dom": "^17.0.0",
+    "@types/react-router-dom": "^5.1.7",
     "axios": "^0.21.1",
     "classnames": "^2.2.6",
     "lodash": "^4.17.20",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
+    "react-bootstrap": "^1.5.0",
+    "react-bootstrap-sidebar": "0.0.1",
     "react-dom": "^17.0.1",
     "react-paginate": "^7.0.0",
     "react-paginating": "^1.4.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "react-spinners": "^0.10.6",
     "reactstrap": "^8.9.0",
@@ -48,7 +53,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-    
   },
   "devDependencies": {
     "@types/classnames": "^2.2.11",

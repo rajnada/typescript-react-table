@@ -26,6 +26,7 @@ const Table = () => {
 
   const loadData = () => {
     axios.get("https://jsonplaceholder.typicode.com/comments").then((res) => {
+      console.log("res =>", res);
       const allData = res.data;
       setdata(allData);
     });
@@ -58,7 +59,7 @@ const Table = () => {
       <DialogLoader loading={isLoading} />
       <TableRecords
         records={filteredValue.length > 0 ? filteredValue : currentData}
-      /> 
+      />
       <PaginationComponent
         postsPerPage={postsPerPage}
         totalPosts={data.length}

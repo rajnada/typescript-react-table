@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 import "../css/pagination.scss";
 
@@ -14,28 +15,24 @@ export const PaginationComponent: React.FC<Props> = ({
   handlePagination,
 }) => {
   const pageNumber: number[] = [];
+  let history = useHistory();
+  console.log("history =>", history);
 
   for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
     pageNumber.push(i);
   }
   return (
-    <div className="pagination-wrapper">
-      <nav aria-label="Page navigation example">
-        <ul className="pagination">
-          {pageNumber.map((num) => (
-            <li key={num} className="page-item">
-              <a
-                onClick={() => handlePagination(num)}
-                href="!#"
-                className="page-link"
-              >
-                {num}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </div>
+    <nav aria-label="Page navigation example">
+      <ul className="pagination">
+        {pageNumber.map((num) => (
+          <li key={num} className="page-item">
+            <a onClick={() => handlePagination(num)} className="page-link">
+              {num}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 };
 

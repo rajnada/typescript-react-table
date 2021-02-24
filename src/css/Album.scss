@@ -1,0 +1,12 @@
+.gallary-img {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  img {
+    width: 15%;
+    height: 200px;
+  }
+}

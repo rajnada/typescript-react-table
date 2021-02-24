@@ -12,7 +12,7 @@ const TableRecords = ({ records }: RecordsProps) => {
   return (
     <React.Fragment>
       <Table>
-        <thead>
+        <thead className="text-center">
           <tr>
             <th style={{ width: "5%" }}>ID</th>
             <th>Name</th>

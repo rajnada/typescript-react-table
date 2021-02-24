@@ -13,7 +13,7 @@ const Searchbar: React.FC<Props> = ({
     display: "flex",
     margin: "35px auto",
     width: "31rem",
-    height: "2rem",
+    height: "3rem",
     background: "rgb(242, 241, 249)",
     border: "1.5px solid black",
     padding: "0.5rem",
