@@ -6,6 +6,7 @@ interface Props {}
 
 const VideoGallary = (props: Props) => {
   const [data, setData] = useState([]);
+  console.log("props =>", props);
   const [currentPage, setCurrentPage] = useState(1);
   // eslint-disable-next-line
   const [postsPerPage, setpostsPerPage] = useState(10);
@@ -27,14 +28,12 @@ const VideoGallary = (props: Props) => {
   const indexOfLastPage = currentPage * postsPerPage;
   const indexOfFirstPage = indexOfLastPage - postsPerPage;
   const currentData = data.slice(indexOfFirstPage, indexOfLastPage);
-
   const handlePages = (updatePage: number) => setCurrentPage(updatePage);
 
   return (
     <div>
       <div className="category-container">
         <h1 className="mt-4 p-5 text-center">Top Video Gallary</h1>
-
         <div className="gallary-img">
           {currentData.map((item: any, index) => (
             <video width="400" controls>

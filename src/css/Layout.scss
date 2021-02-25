@@ -16,13 +16,31 @@
   .sidebar-sticky {
     margin-top: 30px;
   }
-
+  #dropdown-item-button:focus {
+    border-color: none;
+  }
+  .btn {
+    background-color: #343a40;
+    border-color: #343a40;
+  }
+  .btn:focus {
+    background-color: #343a40;
+    border-color: none;
+  }
+  .dropdown-menu {
+    background-color: #343a40;
+  }
   .nav-link {
     color: white;
   }
+
   a:hover {
     color: #ffd91c;
-    font-size: 25px;
+    // font-size: 25px;
+  }
+  a.active {
+    color: #ffd91c;
+    // font-size: 25px;
   }
 }
 #sidebar-wrapper {

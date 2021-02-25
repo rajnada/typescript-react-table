@@ -7,25 +7,27 @@ import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
 
 import Table from "./pages/Table";
 import VideoGallary from "./pages/VideoGallary";
+import Login from "./pages/Login";
+import PrivateRoute, { PublicRoute } from "./globalConfig/PrivateRoute";
+import Header from "./Component/layout/Header";
 // import Sidebar from "./Component/layout/Sidebar";
 
 function App() {
   return (
     <Router>
       <Switch>
+        <PublicRoute component={Login} exact path="/" />
         <div>
-          <header className="App-header">
-            Employee Table using TypeScript & React
-          </header>
+          <Header />
           <Row>
             <Col md={2}>
               <Sidebar />
             </Col>
             <Col md={10}>
               <div className="main-section">
-                <Route exact path="/" component={Table} />
-                <Route exact path="/album" component={Album} />
-                <Route exact path="/videos" component={VideoGallary} />
+                <PrivateRoute exact path="/table" component={Table} />
+                <PrivateRoute exact path="/album" component={Album} />
+                <PrivateRoute exact path="/videos" component={VideoGallary} />
               </div>
             </Col>
           </Row>

@@ -7,6 +7,7 @@ import * as _ from "lodash";
 import PaginationComponent from "../Component/PaginationComponent";
 import DialogLoader from "../Component/layout/DialogueLoader";
 import Searchbar from "../Component/Searchbar";
+import Header from "../Component/layout/Header";
 
 const Table = () => {
   const [data, setdata] = useState([]);
@@ -25,11 +26,13 @@ const Table = () => {
   const [filteredValue, setFiltered] = useState([]);
 
   const loadData = () => {
-    axios.get("https://jsonplaceholder.typicode.com/comments").then((res) => {
-      console.log("res =>", res);
-      const allData = res.data;
-      setdata(allData);
-    });
+    axios
+      .get("https://jsonplaceholder.typicode.com/comments/?_limit=300")
+      .then((res) => {
+        console.log("res =>", res);
+        const allData = res.data;
+        setdata(allData);
+      });
   };
 
   useEffect(() => {
